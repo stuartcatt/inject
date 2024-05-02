@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>inject</title>
+  </head>
+  <body>
+    <h1>My JavaScript Project</h1>
+      <script>var x = window.open("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?www.example.com")
+x.onload = function () {
+    x.eval(`
+window.addEventListener('keydown', function (e) {
+if (e.altKey) {
+ if (e.keyCode == 75) {
+    eval(prompt("Enter code"))
+}
+}
+})`)
+        x.eval(`
+window.addEventListener('keydown', function (e) {
+if (e.altKey) {
+ if (e.keyCode == 85) {
+    window.location.replace("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?" + prompt("enter url"))
+}
+}
+})`)
+}
+</script>
+  </body>
+</html>
