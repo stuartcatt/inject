@@ -63,7 +63,7 @@ frame.contentWindow.eval(document.getElementById('javascript').value)
   url.addEventListener('keydown', function (e) {
       if (e.keyCode == 13) {
           var frame = document.getElementById('proxy')
-          frame.contentWindow.eval(window.location.replace("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?" + url.value))
+          frame.contentWindow.eval('window.location.replace("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?") + url.value')
       }
   })
       // program to display time every 3 seconds
