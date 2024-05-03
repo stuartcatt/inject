@@ -58,18 +58,17 @@ var frame = document.getElementById('proxy')
 frame.contentWindow.eval(document.getElementById('javascript').value)              
               
               }
+          
+  var url = document.getElementById('url')
+  url.addEventListener('keydown', function (e) {
+      if (e.keyCode == 13) {
+          var frame = document.getElementById('proxy')
+          frame.contentWindow.eval(window.location.replace("https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?") + url.value)
+      }
+  })
       // program to display time every 3 seconds
-function showTime() {
-
-    // return new date and time
-    
-    var frame = document.getElementById('proxy')
- document.getElementById('title').innerHTML = "⠀" + frame.contentWindow.title;
-    // display the time after 3 seconds
-     setTimeout(showTime, 1000);
-}
 
 // calling the function
-showTime();</script>
+</script>
   </body>
 </html>
