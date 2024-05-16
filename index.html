@@ -58,7 +58,7 @@ var frame = document.getElementById('proxy')
 frame.contentWindow.eval(document.getElementById('javascript').value)              
               
               }
-          window.onbeforeunload = function () {return true;}
+      window.onload = function (){    window.onbeforeunload = function () {return true;}}
   var url = document.getElementById('url')
   url.addEventListener('keydown', function (e) {
       if (e.keyCode == 13) {
